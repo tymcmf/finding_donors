@@ -11819,7 +11819,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 为这个项目导入需要的库</span>
@@ -11903,7 +11903,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[1]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 
 
 
@@ -11936,17 +11936,17 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：总的记录数</span>
 <span class="n">n_records</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span>
 
 <span class="c1"># TODO：被调查者的收入大于$50,000的人数</span>
-<span class="n">n_greater_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+<span class="n">n_greater_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO：被调查者的收入最多为$50,000的人数</span>
-<span class="n">n_at_most_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&lt;=50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span>
+<span class="n">n_at_most_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&lt;=50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO：被调查者收入大于$50,000所占的比例</span>
 <span class="n">greater_percent</span> <span class="o">=</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">n_greater_50k</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n_greater_50k</span><span class="o">+</span><span class="n">n_at_most_50k</span><span class="p">))</span><span class="o">*</span><span class="mi">100</span>
@@ -11971,8 +11971,8 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of records: 633108
-Individuals making more than $50,000: 156912
-Individuals making at most $50,000: 476196
+Individuals making more than $50,000: 11208
+Individuals making at most $50,000: 34014
 Percentage of individuals making more than $50,000: 24.78%
 </pre>
 </div>
@@ -12006,7 +12006,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 将数据切分成特征和对应的标签</span>
@@ -12342,7 +12342,7 @@ SXaP8WtVTZPMq2qS+zmdJTl+fBcAvJv7gb9TY4xvrwEAAPgRnjABAABtAgIAAGgTEAAAQJuAAAAA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于倾斜的数据使用Log转换</span>
@@ -12677,7 +12677,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 导入sklearn.preprocessing.StandardScaler</span>
@@ -12810,7 +12810,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用pandas.get_dummies()对&#39;features_raw&#39;数据进行独热编码</span>
@@ -12819,9 +12819,9 @@ lt95AAAAAElFTkSuQmCC
 
 <span class="c1"># TODO：将&#39;income_raw&#39;编码成数字值</span>
 <span class="n">income</span> <span class="o">=</span> <span class="n">income_raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&lt;=50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
-<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">income</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>
+<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&lt;=50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">income</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
 <span class="c1"># print(income[:5])</span>
 
 
@@ -12867,7 +12867,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 导入 train_test_split</span>
@@ -12879,8 +12879,6 @@ lt95AAAAAElFTkSuQmCC
 <span class="c1"># 显示切分的结果</span>
 <span class="k">print</span> <span class="s2">&quot;Training set has {} samples.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="k">print</span> <span class="s2">&quot;Testing set has {} samples.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_test</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-
-<span class="k">print</span> <span class="n">y_train</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12897,8 +12895,6 @@ lt95AAAAAElFTkSuQmCC
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training set has 36177 samples.
 Testing set has 9045 samples.
-13181    0.0
-Name: income, dtype: float64
 </pre>
 </div>
 </div>
@@ -12943,14 +12939,14 @@ $$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO： 计算准确率</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span> <span class="o">/</span> <span class="n">income</span><span class="o">.</span><span class="n">size</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="n">income</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO： 使用上面的公式，并设置beta=0.5计算F-score</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span><span class="o">+</span><span class="n">accuracy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">accuracy</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="mf">0.5</span><span class="o">*</span><span class="n">accuracy</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># 打印结果</span>
 <span class="k">print</span> <span class="s2">&quot;Naive Predictor: [Accuracy score: {:.4f}, F-score: {:.4f}]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">)</span>
@@ -12968,7 +12964,7 @@ $$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2068]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -13021,9 +13017,15 @@ $$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 
 选择adaboost，Logistic回归，决策树。
 选择原因（不得不承认，我是试了所有算法后回过来放马后炮的）：</p>
 <ol>
-<li>adaboost是集成算法，结果的进度比较高，而且也不容易过拟合，因此作为第一个首选的算法来测试。</li>
+<li>adaboost是集成算法，结果的精度比较高，而且也不容易过拟合，因此作为第一个首选的算法来测试。</li>
 <li>Logistic回归算法比较适合线性二分，并且包含二分概率。训练和分类速度都比较快。</li>
 <li>决策树可以在相对短的时间内对大型数据源分类，通过决策树可以比较好得解释分类逻辑。</li>
+</ol>
+<p>以上算法的缺点：</p>
+<ol>
+<li>AdaBoost集成算法训练比较耗时，且最后的执行效果对弱分类器敏感。所以如果数据量比较大时需要更多的训练时长。</li>
+<li>Logistic回归：当特征空间很大时，逻辑回归性能会不好；而且数据必须是线性的，遇到非线性数据得先进行转换。</li>
+<li>决策树不支持增量学习，而且容易过拟合。所以当有新数据加入时，模型需要重新学习。</li>
 </ol>
 <p>各个算法优缺点总结汇总(汇集了多个网站的资料，当时忘记记录出处了)
 <img src="attachment:image.png" alt="image.png"></p>
@@ -14020,7 +14022,8 @@ TTUHVzVN0QkAAAAASUVORK5CYII=
 <p>学生选完后，老师把学生选错的样本做个标记圈出来，把选对的样本用橡皮擦擦淡。</p>
 <p>下一次再叫上一个学生，告诉他尽量要把圈出来的样本给分类正确。</p>
 <p>依次往复，每次学生想出来的判断标准，都是为了把之前同学比较容易选错的样本给分对。</p>
-<p>最后，老师把所有学生的判断标准合并成在一起，用来判断高收入人群。</p>
+<p>最后老师把所有学生集合起来，这些学生有的表现比较好，有的表现比较差，老师默默记录在案....</p>
+<p>现在每当来一个新的样本需要判断其是不是高收入时，老师让所有学生给出判断，并且更倾向听取之前表现比较好同学的意见，最后综合大家的观点给出自己的看法。</p>
 <p>这个方法最大的优点是不太容易钻牛角尖（过拟合），而且众人拾柴火焰高（精度大）。</p>
 
 </div>
@@ -14159,7 +14162,7 @@ Final F-score on the testing data: 0.7314
 </tr>
 <tr>
 <td style="text-align:center">F-score</td>
-<td style="text-align:center">0.2068</td>
+<td style="text-align:center">0.2917</td>
 <td style="text-align:center">0.7246</td>
 <td style="text-align:center">0.7314</td>
 </tr>
