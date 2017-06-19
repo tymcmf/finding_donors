@@ -488,7 +488,14 @@
       <option name="project" value="LOCAL" />
       <updated>1497878420610</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Merge remote-tracking branch 'origin/Develop' into Develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;">
+      <created>1497878623625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1497878623625</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -536,7 +543,8 @@
     <MESSAGE value="修改作业-评估模型表现-F1分数之前3题" />
     <MESSAGE value="完成第一次修改，准备第二次提交&#10;" />
     <MESSAGE value="全部完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="全部完成" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Develop' into Develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Develop' into Develop&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
