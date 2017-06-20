@@ -11819,7 +11819,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 为这个项目导入需要的库</span>
@@ -11903,7 +11903,7 @@ div#notebook {
 </div>
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 
 
 
@@ -11936,11 +11936,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：总的记录数</span>
-<span class="n">n_records</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span>
+<span class="n">n_records</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO：被调查者的收入大于$50,000的人数</span>
 <span class="n">n_greater_50k</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">data</span><span class="o">.</span><span class="n">income</span> <span class="o">==</span> <span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -11970,7 +11970,7 @@ div#notebook {
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Total number of records: 633108
+<pre>Total number of records: 45222
 Individuals making more than $50,000: 11208
 Individuals making at most $50,000: 34014
 Percentage of individuals making more than $50,000: 24.78%
@@ -12006,7 +12006,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 将数据切分成特征和对应的标签</span>
@@ -12342,7 +12342,7 @@ SXaP8WtVTZPMq2qS+zmdJTl+fBcAvJv7gb9TY4xvrwEAAPgRnjABAABtAgIAAGgTEAAAQJuAAAAA
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 对于倾斜的数据使用Log转换</span>
@@ -12677,7 +12677,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># 导入sklearn.preprocessing.StandardScaler</span>
@@ -12810,7 +12810,7 @@ lt95AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO：使用pandas.get_dummies()对&#39;features_raw&#39;数据进行独热编码</span>
@@ -12818,10 +12818,8 @@ lt95AAAAAElFTkSuQmCC
 
 
 <span class="c1"># TODO：将&#39;income_raw&#39;编码成数字值</span>
-<span class="n">income</span> <span class="o">=</span> <span class="n">income_raw</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&lt;=50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">income</span><span class="p">[</span><span class="n">income</span><span class="o">==</span><span class="s2">&quot;&gt;50K&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">income</span> <span class="o">=</span> <span class="n">income</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">int</span><span class="p">)</span>
+<span class="n">income</span> <span class="o">=</span> <span class="n">income_raw</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">0</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span> <span class="s2">&quot;&lt;=50K&quot;</span> <span class="k">else</span> <span class="mi">1</span><span class="p">)</span>
+<span class="c1"># income = income.astype(np.int)</span>
 <span class="c1"># print(income[:5])</span>
 
 
@@ -12845,7 +12843,13 @@ lt95AAAAAElFTkSuQmCC
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>103 total features after one-hot encoding.
+<pre>0    0
+1    0
+2    0
+3    0
+4    0
+Name: income, dtype: int64
+103 total features after one-hot encoding.
 </pre>
 </div>
 </div>
@@ -14177,7 +14181,9 @@ Final F-score on the testing data: 0.7314
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>回答：</strong> 见上表</p>
+<p><strong>回答：</strong></p>
+<p>优化的模型相比为优化的模型得到了0.3个百分点的改善。
+相对基准预测期，即使是未优化的模型也已经好上不少了。</p>
 
 </div>
 </div>
